@@ -33,9 +33,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{SalesURL}}/Customers",
+					"raw": "https://bec9f8e4-ae86-4477-8e95-911fd0bb7ddd.mock.pstmn.io/Customers",
+					"protocol": "https",
 					"host": [
-						"{{SalesURL}}"
+						"bec9f8e4-ae86-4477-8e95-911fd0bb7ddd",
+						"mock",
+						"pstmn",
+						"io"
 					],
 					"path": [
 						"Customers"
@@ -51,19 +55,25 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{SalesURL}}/Customers",
+							"raw": "https://bec9f8e4-ae86-4477-8e95-911fd0bb7ddd.mock.pstmn.io/Customers",
+							"protocol": "https",
 							"host": [
-								"{{SalesURL}}"
+								"bec9f8e4-ae86-4477-8e95-911fd0bb7ddd",
+								"mock",
+								"pstmn",
+								"io"
 							],
 							"path": [
 								"Customers"
 							]
 						}
 					},
+					"status": "OK",
+					"code": 200,
 					"_postman_previewlanguage": "Text",
 					"header": null,
 					"cookie": [],
-					"body": null
+					"body": "[\r\n{\r\n    \"CustomerId\": 1,\r\n\t\t\"Name\": \"mauaf\"\r\n},\r\n{\r\n    \"CustomerId\": 2,\r\n\t\t\"Name\": \"HHH\"\r\n}\r\n\r\n]"
 				}
 			]
 		},
@@ -94,7 +104,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"CustomerId\": 1,\n\t\t\"Name\": \"mauaf\"\n}",
+					"raw": "{\n    \"CustomerId\": 4,\n\t\t\"Name\": \"mauaf\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
