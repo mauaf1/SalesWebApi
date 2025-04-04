@@ -112,9 +112,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{SalesURL}}/Customers",
+					"raw": "https://bec9f8e4-ae86-4477-8e95-911fd0bb7ddd.mock.pstmn.io/Customers",
+					"protocol": "https",
 					"host": [
-						"{{SalesURL}}"
+						"bec9f8e4-ae86-4477-8e95-911fd0bb7ddd",
+						"mock",
+						"pstmn",
+						"io"
 					],
 					"path": [
 						"Customers"
@@ -139,19 +143,25 @@
 							}
 						},
 						"url": {
-							"raw": "{{SalesURL}}/Customers",
+							"raw": "https://bec9f8e4-ae86-4477-8e95-911fd0bb7ddd.mock.pstmn.io/Customers",
+							"protocol": "https",
 							"host": [
-								"{{SalesURL}}"
+								"bec9f8e4-ae86-4477-8e95-911fd0bb7ddd",
+								"mock",
+								"pstmn",
+								"io"
 							],
 							"path": [
 								"Customers"
 							]
 						}
 					},
+					"status": "OK",
+					"code": 200,
 					"_postman_previewlanguage": "Text",
 					"header": null,
 					"cookie": [],
-					"body": null
+					"body": ""
 				}
 			]
 		},
@@ -190,9 +200,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{SalesURL}}/Customers/1",
+					"raw": "https://bec9f8e4-ae86-4477-8e95-911fd0bb7ddd.mock.pstmn.io/Customers/1",
+					"protocol": "https",
 					"host": [
-						"{{SalesURL}}"
+						"bec9f8e4-ae86-4477-8e95-911fd0bb7ddd",
+						"mock",
+						"pstmn",
+						"io"
 					],
 					"path": [
 						"Customers",
@@ -218,9 +232,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{SalesURL}}/Customers/1",
+							"raw": "https://bec9f8e4-ae86-4477-8e95-911fd0bb7ddd.mock.pstmn.io/Customers/1",
+							"protocol": "https",
 							"host": [
-								"{{SalesURL}}"
+								"bec9f8e4-ae86-4477-8e95-911fd0bb7ddd",
+								"mock",
+								"pstmn",
+								"io"
 							],
 							"path": [
 								"Customers",
@@ -270,9 +288,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{SalesURL}}/Customers/1",
+					"raw": "https://bec9f8e4-ae86-4477-8e95-911fd0bb7ddd.mock.pstmn.io/Customers/1",
+					"protocol": "https",
 					"host": [
-						"{{SalesURL}}"
+						"bec9f8e4-ae86-4477-8e95-911fd0bb7ddd",
+						"mock",
+						"pstmn",
+						"io"
 					],
 					"path": [
 						"Customers",
@@ -298,9 +320,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{SalesURL}}/Customers/1",
+							"raw": "https://bec9f8e4-ae86-4477-8e95-911fd0bb7ddd.mock.pstmn.io/Customers/1",
+							"protocol": "https",
 							"host": [
-								"{{SalesURL}}"
+								"bec9f8e4-ae86-4477-8e95-911fd0bb7ddd",
+								"mock",
+								"pstmn",
+								"io"
 							],
 							"path": [
 								"Customers",
