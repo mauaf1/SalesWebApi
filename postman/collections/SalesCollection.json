@@ -8,18 +8,19 @@
 	},
 	"item": [
 		{
-			"name": "Get data",
+			"name": "Get customers",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
+						"id": "cbba364c-6149-40a6-863c-681ccb8ac1c9",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript",
-						"id": "cbba364c-6149-40a6-863c-681ccb8ac1c9"
+						"packages": {}
 					}
 				}
 			],
@@ -31,18 +32,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/info?id=1",
+					"raw": "http://localhost:5039/Customers",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "5039",
 					"path": [
-						"info"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
+						"Customers"
 					]
 				},
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -50,11 +47,12 @@
 			"response": []
 		},
 		{
-			"name": "Post data",
+			"name": "Post customer",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
+						"id": "6a2e58ca-2984-43db-b390-eaa09a856fc2",
 						"exec": [
 							"pm.test(\"Successful POST request\", function () {",
 							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
@@ -62,7 +60,7 @@
 							""
 						],
 						"type": "text/javascript",
-						"id": "6a2e58ca-2984-43db-b390-eaa09a856fc2"
+						"packages": {}
 					}
 				}
 			],
@@ -75,7 +73,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"raw": "{\n    \"CustomerId\": 1,\n\t\"Name\": \"mauaf\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -83,12 +81,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/info",
+					"raw": "http://localhost:5039/Customers",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "5039",
 					"path": [
-						"info"
+						"Customers"
 					]
 				},
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
@@ -96,11 +96,12 @@
 			"response": []
 		},
 		{
-			"name": "Update data",
+			"name": "Get customer",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
+						"id": "06d484f0-d42e-43a8-bee2-7574aeb20af9",
 						"exec": [
 							"pm.test(\"Successful PUT request\", function () {",
 							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
@@ -108,7 +109,7 @@
 							""
 						],
 						"type": "text/javascript",
-						"id": "06d484f0-d42e-43a8-bee2-7574aeb20af9"
+						"packages": {}
 					}
 				}
 			],
@@ -117,7 +118,7 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "PUT",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -129,18 +130,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/info?id=1",
+					"raw": "http://localhost:5039/Customers/1",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "5039",
 					"path": [
-						"info"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
+						"Customers",
+						"1"
 					]
 				},
 				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
@@ -148,11 +146,12 @@
 			"response": []
 		},
 		{
-			"name": "Delete data",
+			"name": "Delete Customer",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
+						"id": "f8e091a5-bf1d-4bae-9227-2d90f32f58d5",
 						"exec": [
 							"pm.test(\"Successful DELETE request\", function () {",
 							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
@@ -160,7 +159,7 @@
 							""
 						],
 						"type": "text/javascript",
-						"id": "f8e091a5-bf1d-4bae-9227-2d90f32f58d5"
+						"packages": {}
 					}
 				}
 			],
@@ -181,18 +180,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/info?id=1",
+					"raw": "http://localhost:5039/Customers/1",
+					"protocol": "http",
 					"host": [
-						"{{base_url}}"
+						"localhost"
 					],
+					"port": "5039",
 					"path": [
-						"info"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
+						"Customers",
+						"1"
 					]
 				},
 				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
