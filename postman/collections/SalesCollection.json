@@ -41,10 +41,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{SalesURL}}/Customers",
+					"raw": "http://localhost:5039/Customers",
+					"protocol": "http",
 					"host": [
-						"{{SalesURL}}"
+						"localhost"
 					],
+					"port": "5039",
 					"path": [
 						"Customers"
 					]
@@ -231,6 +233,7 @@
 					},
 					"status": "OK",
 					"code": 200,
+					"_postman_previewlanguage": "Text",
 					"cookie": []
 				}
 			]
