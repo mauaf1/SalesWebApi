@@ -3,7 +3,7 @@ name: Automated API tests using Postman CLI
 on: push
 
 env: 
-  {{SalesURL}}: https://bec9f8e4-ae86-4477-8e95-911fd0bb7ddd.mock.pstmn.io
+  SalesURL: https://bec9f8e4-ae86-4477-8e95-911fd0bb7ddd.mock.pstmn.io
 
 jobs:
   automated-api-tests:
