@@ -15,7 +15,7 @@ jobs:
       - name: Start API
         run: |
           dotnet run --project SalesWebApi/SalesWebApi.csproj --urls "http://localhost:5039" &
-        working-directory: SalesWebApi\SalesWebApi
+    
 
       - name: Wait for API to start
         run: timeout /t 100
