@@ -15,13 +15,13 @@ jobs:
       - name: Start API
         run: |
           dotnet run --project SalesWebApi/SalesWebApi.csproj --urls "http://localhost:5039" &
-        working-directory: D:\a\SalesWebApi\SalesWebApi
+        working-directory: SalesWebApi\SalesWebApi
 
       - name: Wait for API to start
-        run: timeout /t 10
+        run: timeout /t 100
 
       - name: Login to Postman CLI
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
 
       - name: Run API tests
-        run: postman collection run "D:\a\SalesWebApi\SalesWebApi/postman/collections/SalesCollection.json"
+        run: postman collection run "SalesWebApi\SalesWebApi/postman/collections/SalesCollection.json"
